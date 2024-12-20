@@ -1,6 +1,7 @@
 .productdisplay{
     display: flex;
     margin: 0px 170px;
+    margin-top: 60px;
 }
 .productdisplay-left{
     display: flex;
@@ -33,26 +34,53 @@
     font-size: 40px;
     font-weight: 700;
 }
-.productdisplay-right-stars{
+.productdisplay-right-stars {
     display: flex;
     align-items: center;
     margin-top: 13px;
     gap: 5px;
     color: #1c1c1c;
-    font-size: 16px;
-}
+    font-size: 28px;
+  }
+  
+  .star {
+    color: #f39c12; /* Gold color for filled stars */
+  }
+  
+  .star:nth-child(n+4) {
+    color: #ccc; /* Light gray for empty stars */
+  }
+  
+  .rating-text {
+    font-size: 14px;
+    color: #888;
+    margin-left: 10px;
+  }
 .productdisplay-right-prices{
     display: flex;
-    margin: 40px 0px;
+    margin: 20px 0px;
+    gap: 10px;
 }
 .productdisplay-right-price-old{
     color: #818181;
     text-decoration: line-through;
     margin-right: 20px;
+    font-size: 18px;
 }
 .productdisplay-right-price-new{
-    color: #ff4141;
+    font-size: 24px;
+  font-weight: bold;
+  color: #e74c3c; /* Initial color */
+  animation: brighten 0.9s infinite alternate;
 }
+@keyframes brighten {
+    0% {
+      color: #e74c3c; /* Red color */
+    }
+    100% {
+      color: #f39c12; /* Bright yellow */
+    }
+  }
 .productdisplay-right-size h1{
     margin-top: 55px;
     color: #656565;
@@ -61,11 +89,11 @@
 }
 .productdisplay-right-sizes{
     display: flex;
-    margin: 30px 0px;
+    margin: 10px 0px;
     gap: 20px;
 }
 .productdisplay-right-sizes div{
-    padding: 18px 24px;
+    padding: 10px 14px;
     background: #fbfbfb;
     border: 1px solid #ebebeb;
     border-radius: 3px;
@@ -77,7 +105,7 @@
     font-size: 16px;
     font-weight: 600;
     color: white;
-    background: #FF4141;
+    background: #fbc917;
     margin-bottom: 40px;
     border: none;
     outline: none;
@@ -97,7 +125,7 @@
     margin: 5px;
   }
   .size-box.selected {
-    background-color: #4caf50;
+    background-color: #77840a;
     color: white;
   }
   .size-chart table {
@@ -115,21 +143,130 @@
     margin: 0 10px;
   }
   .popup-message {
-    background-color: #4caf50;
+    background-color: #eff7ef;
     color: white;
     padding: 10px;
     margin-top: 10px;
     text-align: center;
   }
-  .review-section ul {
-    list-style: none;
-    padding: 0;
+
+  .color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    display: inline-block;
   }
-  .review-section textarea {
+  
+  .color-circle.selected {
+    border: 2px solid #000;
+  }
+  
+  .selected-color {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .productdisplay-size-chart {
+    margin: 20px 0;
+  }
+  
+  .productdisplay-size-chart h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .size-chart-table {
     width: 100%;
-    height: 80px;
-    margin: 10px 0;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .size-chart-table th {
+    background-color: #f8f8f8;
+    color: #555;
     padding: 10px;
+    border: 1px solid #ddd;
+    font-weight: bold;
+  }
+  
+  .size-chart-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .size-chart-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .size-chart-table tr:hover {
+    background-color: #eaeaea;
+  }
+  .quantity-selector {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .quantity-selector h2 {
+    font-size: 18px;
+    margin-right: 15px;
+    color: #333;
+  }
+  
+  .quantity-selector button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quantity-selector button:hover {
+    background-color: #e9edf0;
+  }
+  
+  .quantity-selector span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #140606;
+  }
+  
+  .productdisplay-right button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #c3691a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .productdisplay-right button:hover {
+    background-color: #9dc021;
+  }
+  
+  .popup-message {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #28a745;
+    font-weight: bold;
   }
   
 
