@@ -1,0 +1,99 @@
+/* General styles for the container */
+.add-product {
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+    padding: 4rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 2rem auto;
+    font-family: 'Arial', sans-serif;
+    width: 90%;
+  }
+  
+  /* Item fields styling */
+  .addproduct-itemfield {
+    margin-bottom: 1.5rem;
+  }
+  
+  .addproduct-itemfield p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Input fields */
+  .addproduct-itemfield input, .add-product-selector {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .addproduct-itemfield input:focus, 
+  .add-product-selector:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Styling the price fields container */
+  .addproduct-price {
+    display: flex;
+    gap: 5rem;
+  }
+  
+  .addproduct-price .addproduct-itemfield {
+    flex: 1;
+  }
+  
+  /* Dropdown selector */
+  .add-product-selector {
+    appearance: none;
+    background: #fff;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+    cursor: pointer;
+  }
+  
+  /* File upload styling */
+  .addproduct-upload-image {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .addproduct-upload-image:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+  
+  /* Button styling */
+  .addproduct-button {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .addproduct-button:hover {
+    background: linear-gradient(90deg, #0056b3, #003f8a);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .addproduct-price {
+      flex-direction: column;
+    }
+  }
+  

@@ -1,0 +1,89 @@
+.shop-category{
+    margin-left: 100px;
+}
+
+.shopcategory-banner {
+    display: block;
+    margin: 100px auto;
+    width: 1100px;
+    height: 400px;
+    padding-top: 50px;
+    margin-left: 200px;
+
+  }
+  
+  .shopcategory-indexSort {
+    display: flex;
+    margin: 0px 170px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .shopcategory-sort {
+    padding: 10px 20px;
+    width: 10%;
+    border-radius: 40px;
+    border: 1px solid #888;
+  }
+  
+  .shopcategory-sort img {
+    width: 12px;
+  }
+  
+  .shopcategory-indexSort p span {
+    font-weight: 600;
+  }
+  
+  .shopcategory-products {
+    margin-top: 50px;
+    margin-left: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .shopcategory-loadmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+    width: 233px;
+    height: 69px;
+    border-radius: 75px;
+    background: #ededed;
+    color: #787878;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  /* MiddleNav Fixed Position */
+  .middle-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    top: 20%; /* Adjust as necessary */
+    left: 200px; /* 200px margin from the left */
+    z-index: 10;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Style for buttons inside MiddleNav */
+  .middle-nav button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .middle-nav button:hover {
+    background-color: #f0f0f0;
+  }
+  

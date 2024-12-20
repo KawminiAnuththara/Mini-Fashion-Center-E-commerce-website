@@ -1,0 +1,123 @@
+.relatedproduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 90vh;
+  }
+  
+  .relatedproduct h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+  }
+  
+  .relatedproduct hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+  }
+  
+  .relatedproducts-item {
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+  }
+  
+  /* For screens up to 1280px */
+  @media (max-width: 1280px) {
+    .relatedproduct {
+      height: 80vh;
+    }
+  
+    .relatedproduct h1 {
+      font-size: 45px;
+    }
+  
+    .relatedproduct hr {
+      width: 180px;
+      height: 5px;
+    }
+  
+    .relatedproducts-item {
+      gap: 20px;
+    }
+  }
+  
+  /* For screens up to 1240px */
+  @media (max-width: 1240px) {
+    .relatedproduct {
+      height: 75vh;
+    }
+  
+    .relatedproduct h1 {
+      font-size: 40px;
+    }
+  
+    .relatedproduct hr {
+      width: 160px;
+      height: 4px;
+    }
+  
+    .relatedproducts-item {
+      gap: 15px;
+      flex-wrap: wrap; /* Allow items to wrap */
+      justify-content: center;
+    }
+  }
+  
+  /* For screens up to 800px */
+  @media (max-width: 800px) {
+    .relatedproduct {
+      height: auto;
+      gap: 15px;
+      margin-top: -70px;
+      margin-bottom: 20px;
+    }
+  
+    .relatedproduct h1 {
+      font-size: 35px;
+      text-align: center;
+    }
+  
+    .relatedproduct hr {
+      width: 140px;
+      height: 3px;
+    }
+  
+    .relatedproducts-item {
+      margin-top: 30px;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  
+  /* For screens up to 500px */
+  @media (max-width: 500px) {
+    .relatedproduct {
+      height: auto;
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    .relatedproduct h1 {
+      font-size: 28px;
+      text-align: center;
+    }
+  
+    .relatedproduct hr {
+      width: 120px;
+      height: 2px;
+    }
+  
+    .relatedproducts-item {
+      margin-top: 20px;
+      gap: 5px;
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+    }
+  }
+  
+  
