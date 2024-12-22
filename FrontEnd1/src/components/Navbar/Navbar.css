@@ -214,6 +214,13 @@
     .nav-menuimage.open {
       transform: rotate(90deg);
     }
+    .nav-login-cart{
+      margin: 5px;
+      gap:15px;
+    }
+    .logimage{
+      margin-left: -120px;
+    }
   }
   
   @media (max-width: 500px) {

@@ -30,6 +30,7 @@
     .breadcrum{
         margin: 30px 10px;
         font-size: 12px;
+        margin-top: 80px;
     }
 }
 @media(max-width:500px){
