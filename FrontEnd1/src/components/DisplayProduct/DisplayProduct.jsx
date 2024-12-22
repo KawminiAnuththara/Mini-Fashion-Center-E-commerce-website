@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { useContext } from 'react';
+import React, { useState, useEffect } from "react";
+import { useContext } from "react";
 import { useUser } from "@clerk/clerk-react"; // Clerk user hook
-import './DisplayProduct.css';
-import { ShopContext } from '../../context/ShopContext';
+import "./DisplayProduct.css";
+import { ShopContext } from "../../context/ShopContext";
 
 const DisplayProduct = (props) => {
   const { product } = props;
@@ -15,7 +15,13 @@ const DisplayProduct = (props) => {
   const [selectedColor, setSelectedColor] = useState("");
   const [showPopup, setShowPopup] = useState(false);
 
-  const images = [product.image1, product.image2, product.image3, product.image4, product.image];
+  const images = [
+    product.image1,
+    product.image2,
+    product.image3,
+    product.image4,
+    product.image,
+  ];
 
   // Predefined colors
   const colors = [
@@ -71,17 +77,25 @@ const DisplayProduct = (props) => {
       <div className="productdisplay-right">
         <h1>{product.name}</h1>
         <div className="productdisplay-right-stars">
-  <span className="star">&#9733;</span>
-  <span className="star">&#9733;</span>
-  <span className="star">&#9733;</span>
-  <span className="star">&#9733;</span>
-  <span className="star">&#9734;</span> {/* Empty star */}
-  <span className="rating-text">4.0</span> {/* Average rating */}
-</div>
-        <p class="description">Made from high-quality cotton fabric, this shirt offers a soft feel and durability. It's easy to wash and designed for long-lasting wear, keeping its shape and comfort for years.</p>
+          <span className="star">&#9733;</span>
+          <span className="star">&#9733;</span>
+          <span className="star">&#9733;</span>
+          <span className="star">&#9733;</span>
+          <span className="star">&#9734;</span> {/* Empty star */}
+          <span className="rating-text">4.0</span> {/* Average rating */}
+        </div>
+        <p class="description">
+          Made from high-quality cotton fabric, this shirt offers a soft feel
+          and durability. It's easy to wash and designed for long-lasting wear,
+          keeping its shape and comfort for years.
+        </p>
         <div className="productdisplay-right-prices">
-          <div className="productdisplay-right-price-old">${product.old_price}</div>
-          <div className="productdisplay-right-price-new">${product.new_price}</div>
+          <div className="productdisplay-right-price-old">
+            ${product.old_price}
+          </div>
+          <div className="productdisplay-right-price-new">
+            ${product.new_price}
+          </div>
         </div>
         <div className="productdisplay-size-chart">
           <h2>Size Chart</h2>
@@ -116,7 +130,9 @@ const DisplayProduct = (props) => {
             {["S", "M", "L", "XL", "XXL"].map((size) => (
               <div
                 key={size}
-                className={`size-box ${selectedSize === size ? "selected" : ""}`}
+                className={`size-box ${
+                  selectedSize === size ? "selected" : ""
+                }`}
                 onClick={() => setSelectedSize(size)}
               >
                 {size}
@@ -131,18 +147,25 @@ const DisplayProduct = (props) => {
             {colors.map((color) => (
               <div
                 key={color.name}
-                className={`color-circle ${selectedColor === color.name ? "selected" : ""}`}
+                className={`color-circle ${
+                  selectedColor === color.name ? "selected" : ""
+                }`}
                 style={{ backgroundColor: color.hex }}
                 onClick={() => setSelectedColor(color.name)}
               ></div>
             ))}
           </div>
-          {selectedColor && <div className="selected-color">Selected Color: {selectedColor}</div>}
+          {selectedColor && (
+            <div className="selected-color">
+              Selected Color: {selectedColor}
+            </div>
+          )}
         </div>
 
-
         <button onClick={handleAddToCart}>ADD TO CART</button>
-        {showPopup && <div className="popup-message">Product added to the cart!</div>}
+        {showPopup && (
+          <div className="popup-message">Product added to the cart!</div>
+        )}
       </div>
     </div>
   );
