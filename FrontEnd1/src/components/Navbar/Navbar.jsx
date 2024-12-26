@@ -6,7 +6,34 @@ import { Link } from "react-router-dom";
 import { ShopContext } from "../../../../FrontEnd1/src/context/ShopContext";
 import down_arrow from "../assets/downarrow.png";
 import { UserButton } from "@clerk/clerk-react";
-import { motion } from "framer-motion";
+import { easeInOut, motion, stagger } from "framer-motion";
+
+const navAnimation = {
+  hidden:{
+    opacity:0,
+  },
+  show:{
+    opacity:1,
+    transition:{
+      staggerChildren:0.4,
+      ease:'easeInOut',
+    }
+  }
+}
+
+const navItem = {
+  hidden:{
+    opacity:0,
+    y:'-20px',
+  },
+  show:{
+    opacity:1,
+    y:0,
+    transition:{
+      ease:'easeInOut',
+    }
+  }
+}
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
@@ -29,52 +56,32 @@ const Navbar = () => {
         src={down_arrow}
         alt=""
       />
-      <ul ref={menuRef} className="nav-menu">
-        <motion.li
-          initial={{ transform: "translateX(-100px)" }}
-          animate={{ transform: "translateX(0px)" }}
-          transition={{ type: "spring" }}
-          onClick={() => setMenu("shop")}
-        >
+      <motion.ul variants={navAnimation} initial="hidden" animate="show" ref={menuRef} className="nav-menu">
+        <motion.li variants={navItem}>
           <Link style={{ textDecoration: "none" }} to="/">
             Shop
           </Link>
           {menu === "shop" ? <hr /> : null}
         </motion.li>
-        <motion.li
-          initial={{ transform: "translateX(-100px)" }}
-          animate={{ transform: "translateX(0px)" }}
-          transition={{ type: "spring" }}
-          onClick={() => setMenu("mens")}
-          >
+        <motion.li variants={navItem}>
           <Link style={{ textDecoration: "none" }} to="/mens">
             Mens
           </Link>
           {menu === "mens" ? <hr /> : null}
         </motion.li>
-        <motion.li
-          initial={{ transform: "translateX(-100px)" }}
-          animate={{ transform: "translateX(0px)" }}
-          transition={{ type: "spring" }}
-          onClick={() => setMenu("womens")}
-        >
+        <motion.li variants={navItem}>
           <Link style={{ textDecoration: "none" }} to="/womens">
             Women
           </Link>
           {menu === "womens" ? <hr /> : null}
         </motion.li>
-        <motion.li
-          initial={{ transform: "translateX(-100px)" }}
-          animate={{ transform: "translateX(0px)" }}
-          transition={{ type: "spring" }}
-          onClick={() => setMenu("kids")}
-        >
+        <motion.li variants={navItem}>
           <Link style={{ textDecoration: "none" }} to="/kids">
             Kids
           </Link>
           {menu === "kids" ? <hr /> : null}
         </motion.li>
-      </ul>
+      </motion.ul>
       <div className="nav-login-cart">
         <Link to="/login">
           <button>Login</button>
