@@ -48,6 +48,7 @@ const typingContainer = {
       opacity:1,
       y:0,
       transition:{
+        delay:2.2,
         ease:'easeInOut',
       }
     }
@@ -65,6 +66,7 @@ const typingContainer = {
       width:'250px',
       y:0,
       transition:{
+        delay:2.3,
         ease:'easeInOut',
       }
     }
@@ -80,7 +82,7 @@ const typingContainer = {
      
       transition:{
         staggerChildren:0.4,
-        //delayChildren:3.8,
+        delayChildren:3.8,
         ease:'easeInOut',
       }
     }
@@ -99,6 +101,44 @@ const typingContainer = {
         
         ease:'easeInOut',
       }
+    }
+  }
+
+  const imageabout1 = {
+    hidden:{
+        opacity:0,
+        y:'400px',
+        width:'80px'
+    },
+    show:{
+        opacity:1,
+        y:0,
+        width:'250px',
+        transition:{
+            delay:2.5,
+            duration:1,
+            ease:'easeInOut',
+        }
+    }
+  }
+
+  const imageabout2 = {
+    hidden:{
+        opacity:0,
+        y:'400px',
+        x:'50px',
+        width:'80px'
+    },
+    show:{
+        opacity:1,
+        y:0,
+        x:0,
+        width:'250px',
+        transition:{
+            delay:3.4,
+            duration:1,
+            ease:'easeInOut',
+        }
     }
   }
 
