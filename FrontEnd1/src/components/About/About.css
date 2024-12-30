@@ -1,83 +1,83 @@
 .about{
    
-    height: 100vh;
-    color: #242424;
+  height: 100vh;
+  color: #242424;
 
-    margin-top: 200px;
-    width: 100%;
+  margin-top: 200px;
+  width: 100%;
 }
 
 .aboutsection{
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-  }
-  .aboutright{
-    height: 100%;
-    position: relative;
-  }
-  .aboutleft{
-    position: relative;
-    width: 100%;
-  }
-  .aboutleft h1{
-    font-size: 50px;
-    text-align: center;
-    font-weight: 600;
-    padding: 20px;
-  }
-  .image1{
-    width: 280px;
-    height: 400px;
-    position: absolute;
-    top: 50px;
-    border-radius: 10px;
-  }
-  .image2{
-    width: 280px;
-    height: 400px;
-    position: absolute;
-    top: 180px;
-    margin-left: 200px;
-    border-radius: 10px;
-  }
-  .smallfashionImage{
-    width: 500px;
-    margin-top: 20px;
-    
-  }
-  .smallfashionImage img{
-    width: 70px;
-    padding: 20px;
-    
-  }
- 
-  .aboutbutton{
-    width: 80%;
-    margin-left:auto ;
-    margin-top: 2rem;
-  }
-  .readmore-about{
-    padding: 0.8rem 1rem 0.8rem 1rem;
-    border: none;
-    background-color: #242424;
-    transform-origin: left;
-    color: #d2d2d2;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  .explain-about p{
-    text-align: justify;
-    width: 100%;
-    padding: 20px;
-    margin-top: -20px;
-    width: 500px;
-    margin-left: -70px;
-  }
-  .explain-about{
-    width: 280px;
-    position: absolute;
-    top: 120px;
-    left: 200px;
-  }
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.aboutright{
+  height: 100%;
+  position: relative;
+}
+.aboutleft{
+  position: relative;
+  width: 100%;
+}
+.aboutleft h1{
+  font-size: 50px;
+  text-align: center;
+  font-weight: 600;
+  padding: 20px;
+}
+.image1{
+  width: 280px;
+  height: 400px;
+  position: absolute;
+  top: 50px;
+  border-radius: 10px;
+}
+.image2{
+  width: 280px;
+  height: 400px;
+  position: absolute;
+  top: 180px;
+  margin-left: 200px;
+  border-radius: 10px;
+}
+.smallfashionImage{
+  width: 500px;
+  margin-top: 20px;
+  
+}
+.smallfashionImage img{
+  width: 70px;
+  padding: 20px;
+  
+}
+
+.aboutbutton{
+  width: 80%;
+  margin-left:auto ;
+  margin-top: 1rem;
+}
+.readmore-about{
+  padding: 0.8rem 1rem 0.8rem 1rem;
+  border: none;
+  background-color: #242424;
+  transform-origin: left;
+  color: #d2d2d2;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.explain-about p{
+  text-align: justify;
+  width: 100%;
+  padding: 30px;
+  margin-top: -80px;
+  width: 500px;
+  margin-left: -70px;
+}
+.explain-about{
+  width: 280px;
+  position: absolute;
+  top: 180px;
+  left: 200px;
+}
