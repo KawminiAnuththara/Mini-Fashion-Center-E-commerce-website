@@ -55,7 +55,7 @@
   .aboutbutton{
     width: 80%;
     margin-left:auto ;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   .readmore-about{
     padding: 0.8rem 1rem 0.8rem 1rem;
@@ -70,14 +70,14 @@
   .explain-about p{
     text-align: justify;
     width: 100%;
-    padding: 30px;
-    margin-top: -80px;
+    padding: 20px;
+    margin-top: -20px;
     width: 500px;
     margin-left: -70px;
   }
   .explain-about{
     width: 280px;
     position: absolute;
-    top: 180px;
+    top: 120px;
     left: 200px;
   }

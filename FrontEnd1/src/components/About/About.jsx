@@ -8,7 +8,7 @@ import fashion4 from "../../components/assets/fashion3.jpg";
 import image1 from "../../components/assets/image1.jpg";
 import image2 from "../../components/assets/image2.jpg";
 
-import LocomotiveScroll from 'locomotive-scroll';
+import LocomotiveScroll from 'react-locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import {motion} from "framer-motion"
 
@@ -147,8 +147,8 @@ const About = () => {
   return (
     <div className='about'>
         <section className='aboutsection'>
-         <div className='aboutleft'>
-          <motion.h1 variants={typingContainer} initial="hidden" animate="show" data-scroll data-scroll-delay='0.13'data-scroll-speed='0.3' data-scroll-direction="horizontal" >
+         <div className='aboutleft' >
+          <motion.h1 variants={typingContainer} initial="hidden" animate="show"  data-scroll-speed='0.3' data-scroll-direction="horizontal" >
             {
                Array.from("About Us").map((word,i)=>(
                 <motion.span key={i} variants={typingText}>{word}</motion.span>
@@ -169,7 +169,7 @@ const About = () => {
               serve you
             </motion.p>
             <div className="aboutbutton">
-              <motion.button variants={buttonProduct} initial="hidden" animate="show" className='readmore-about'>Read More</motion.button>
+              <motion.button variants={buttonProduct} initial="hidden" animate="show" className='readmore-about' data-scroll data-scroll-delay='0.13'data-scroll-speed='0.3'>Read More</motion.button>
             </div>
             <motion.div variants={miniProduct} initial="hidden" animate="show" className="smallfashionImage" data-scroll data-scroll-delay='0.13'data-scroll-speed='0.3'>
               <motion.img src={fashion1} alt=''  variants={miniProductitem}/>
