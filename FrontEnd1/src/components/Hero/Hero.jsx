@@ -20,17 +20,7 @@ const container={
 }
 
 const Hero = () => {
-  useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector('.hero'),  // Target element for scrolling
-      smooth: true,  // Enable smooth scrolling
-    });
-
-    // Clean up Locomotive Scroll when component is unmounted
-    return () => {
-      scroll.destroy();
-    };
-  }, []);
+  
 
   return (
     <div className='hero' data-scroll-container>
