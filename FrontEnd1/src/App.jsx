@@ -12,6 +12,7 @@ import man_banner from '../src/components/assets/man_banner.png';
 import women_banner from '../src/components/assets/women_banner.png';
 import kid_banner from '../src/components/assets/kid_banner.png';
 import { useUser } from '@clerk/clerk-react';
+import Register from './pages/register/Register';
 
 function App() {
   const { isSignedIn } = useUser();
@@ -21,11 +22,11 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          {/* Default page: Shop */}
+          
           <Route path="/" element={<Shop />} />
 
           {/* Conditional rendering for protected routes */}
-          {isSignedIn && (
+          
             <>
               <Route path="/mens" element={<ShopCategory banner={man_banner} category="men" />} />
               <Route path="/womens" element={<ShopCategory banner={women_banner} category="women" />} />
@@ -41,10 +42,11 @@ function App() {
               
               <Route path="/cart" element={<Cart />} />
             </>
-          )}
+        
 
-          {/* Always accessible route */}
+          
           <Route path="/login" element={<LoginSignup />} />
+          <Route path='/register' element={<Register/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>
